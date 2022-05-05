@@ -14,6 +14,17 @@ const update = async (data) => {
     }
 }
 
+const getEmployee = async (id) => {
+    try {
+        const user = User.findById(id).exec();
+        return user;
+    } catch (err) {
+        console.log(err);
+        return err;
+    }
+}
+
 module.exports = {
-    update
+    update,
+    getEmployee
 }
