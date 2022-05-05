@@ -10,6 +10,12 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    salary: {
+        type: Number
+    },
+    status: {
+        type: String
     }
 }, {timestamps: true});
 
